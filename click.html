@@ -1,0 +1,24 @@
+<html>
+
+<head></head>
+
+<body>
+
+<h2>WEBSITE IS VULNERABLE TO CLICKJACKING</h2>
+  <iframe id="iframe" src="" height="600" width="1500"></iframe>
+<form onsubmit="updateIframe(); return false;">
+  <label for="iframe-url">Enter URL:</label><br>
+  <input type="text" id="iframe-url" name="iframe-url"  >
+  <input type="submit" value="Go">
+  <br><br>
+</form>
+
+<script>
+function updateIframe() {
+  var url = document.getElementById("iframe-url").value;
+  document.getElementById("iframe").src = url;
+}
+</script>
+</body>
+
+</html>
